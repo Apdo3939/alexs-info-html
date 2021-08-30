@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: burlywood;
+}
+
+.max-width {
+    max-width: 1200px;
+    padding: 0 10px;
+    margin: auto;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 24px 0;
+    background-color: rgb(233, 155, 10);
+    border-bottom: 1px solid darkgoldenrod;
+
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    color: rgb(100, 80, 255);
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+.navbar .menu li {
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    display: block;
+    color: rgb(100, 80, 255);
+    font-size: larger;
+    font-weight: 500;
+    margin-left: 24px;
+}
+
+.menu-btn {
+    color: rgb(100, 80, 255);
+    font-size: x-large;
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width: 768px) {
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .navbar .menu {
+        background-color: darkgoldenrod;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        text-align: center;
+        padding-top: 80px;
+    }
+
+    .navbar .menu.active {
+        left: 0;
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 16px 0;
+        font-size: large;
+    }
+
+}
