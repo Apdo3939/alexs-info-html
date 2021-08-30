@@ -1,13 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    color: white;
+}
+
+html,
+body {
+    height: 100%;
 }
 
 body {
     background-color: burlywood;
+    display: flex;
+    flex-direction: column;
 }
 
 .max-width {
@@ -21,9 +31,9 @@ body {
     width: 100%;
     z-index: 999;
     padding: 24px 0;
+    font-family: 'Montserrat', sans-serif;
     background-color: rgb(233, 155, 10);
     border-bottom: 1px solid darkgoldenrod;
-
 }
 
 .navbar .max-width {
@@ -33,7 +43,6 @@ body {
 }
 
 .navbar .logo a {
-    color: rgb(100, 80, 255);
     font-size: xx-large;
     font-weight: 500;
 }
@@ -44,14 +53,12 @@ body {
 
 .navbar .menu li a {
     display: block;
-    color: rgb(100, 80, 255);
     font-size: larger;
     font-weight: 500;
     margin-left: 24px;
 }
 
 .menu-btn {
-    color: rgb(100, 80, 255);
     font-size: x-large;
     cursor: pointer;
     display: none;
@@ -63,8 +70,12 @@ body {
         z-index: 999;
     }
 
+    .menu-btn i.active:before {
+        content: '\f00d';
+    }
+
     .navbar .menu {
-        background-color: darkgoldenrod;
+        background-color: rgb(232, 163, 80);
         position: fixed;
         height: 100vh;
         width: 100%;
@@ -72,6 +83,7 @@ body {
         top: 0;
         text-align: center;
         padding-top: 80px;
+        transition: all 0.3s ease;
     }
 
     .navbar .menu.active {
@@ -84,8 +96,87 @@ body {
 
     .navbar .menu li a {
         display: inline-block;
-        margin: 16px 0;
+        margin: 8px 0;
         font-size: large;
     }
 
+    .max-width {
+        max-width: 768px;
+    }
+
+}
+
+section {
+    padding: 120px 0;
+}
+
+@media(max-width: 768px) {
+    section {
+        padding: 120px 0;
+    }
+
+}
+
+.top {
+    display: flex;
+    background: url('../images/2.jpg') no-repeat center;
+    height: 100vh;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.top .max-width {
+    width: 100%;
+    display: flex;
+}
+
+.top .top-content .text-1 {
+    font-size: larger;
+    margin-top: 120px;
+}
+
+.top .top-content .text-2 {
+    font-size: xx-large;
+    font-weight: 400;
+    margin: 8px 0;
+}
+
+.top .top-content .text-3 {
+    font-size: x-large;
+}
+
+.top .top-content a {
+    display: inline-block;
+    background-color: rgb(233, 155, 10);
+    font-size: larger;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 500;
+    border-radius: 8px;
+    border: 2px solid rgb(233, 155, 10);
+    transition: all 0.3s ease;
+}
+
+.top .top-content a:hover {
+    background: none;
+    color: rgb(233, 155, 10);
+}
+
+footer {
+    background-color: rgb(233, 155, 10);
+    padding: 25px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: auto;
+    border-top: 1px solid darkgoldenrod;
+}
+
+footer span a {
+    color: rgb(100, 80, 255);
+}
+
+footer span a:hover {
+    color: white;
 }
